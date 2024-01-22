@@ -7,6 +7,11 @@ body {
     background-color: hsl(234, 29%, 20%);
 }
 
+.modal {
+    background-color: hsl(234, 29%, 20%) !important;
+    font-family: 'Roboto', sans-serif;
+}
+
 .home {
     background-color: white;
 }
@@ -22,15 +27,17 @@ button {
 
 /* responsiveness */
 @media only screen and (max-width: 768px) {
-    body{
+    body {
         width: 100%;
         height: fit-content;
     }
-    #right-img{
+
+    #right-img {
         width: 100%;
         /* padding-left: 2%;
         padding-right: 2%; */
     }
+
     .container {
         flex-direction: column;
     }
@@ -41,7 +48,8 @@ button {
         /* padding: 0; */
         order: initial;
     }
-    .left{
+
+    .left {
         padding: 8% !important;
     }
 }

@@ -112,10 +112,62 @@
           </script>
 
           <button
+            onclick="showModal()"
             class="rounded-md py-2 font-bold text-xs md:text-sm lg:text-sm px-4 md:px-4 lg:px-2 text-center w-full"
           >
             Subscribe to monthly newsletter
           </button>
+          <!-- thank you modal -->
+          <div
+            id="customModal"
+            class="hidden fixed inset-0 flex items-center justify-center overflow-hidden modal"
+          >
+            <div class="flex items-center justify-center min-h-screen">
+              <div class="relative z-10 bg-white p-10 rounded-xl max-w-md">
+                <img
+                  src="./assets/images/icon-list.svg"
+                  alt="check-icon"
+                  class="img-fluid mr-4 h-14"
+                />
+                <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                  <h1 class="font-bold text-2xl md:text-2xl lg:text-4xl py-2">
+                    Thanks for<br />
+                    Subscribing!
+                  </h1>
+                  <p>
+                    A confirmation email has been sent to ash@loremcompany.com.
+                    Please open it and click the button inside to confirm your
+                    subscription.
+                  </p>
+                </div>
+                <div class="px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                  <button
+                    type="button"
+                    class="rounded-md py-2 font-bold text-xs md:text-sm lg:text-sm px-4 md:px-4 lg:px-2 text-center w-full"
+                    onclick="hideModal()"
+                  >
+                    Dismiss message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- open modal & prevent scrolling page when modal is open -->
+          <script>
+            function showModal() {
+              document.getElementById("customModal").classList.remove("hidden");
+              document.body.style.overflow = "hidden";
+              // remove margin
+              document.body.style.overflow = "hidden"; 
+            }
+            // hide modal and allow scrolling when modal is closed
+            function hideModal() {
+              document.getElementById("customModal").classList.add("hidden");
+              document.body.style.overflow = "";
+              // reset margin when hiding modal
+              document.body.style.overflow = "hidden"; 
+            }
+          </script>
         </div>
 
         <!--image  -->
@@ -137,10 +189,5 @@
         <a href="http://github.com/SusanGithaigaN">Susan Githaiga</a>.
       </div>
     </div>
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
-
-    <!-- Success message end -->
   </body>
 </html>
