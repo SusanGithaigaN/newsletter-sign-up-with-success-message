@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custome css -->
+    <link rel="stylesheet" href="./styles.css " />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <div class="home rounded-xl">
+      <div class="container flex flex-wrap md:flex-row">
+        <!-- text -->
+        <div
+          class="left w-full md:w-1/2 lg:w-1/2 px-0 md:px-4 lg:px-8 py-4 order-2 md:order-1"
+        >
+          <h1 class="font-bold text-2xl md:text-2xl lg:text-4xl py-2">
+            Stay updated!
+          </h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="list-none py-4">
+            <li class="flex">
+              <img
+                src="./assets/images/icon-list.svg"
+                alt="check-icon"
+                class="img-fluid mr-4"
+              />
+              Product discovery and building what matters
+            </li>
+            <li class="flex py-2">
+              <img
+                src="./assets/images/icon-list.svg"
+                alt="check-icon"
+                class="img-fluid mr-4"
+              />
+              Measuring to ensure updates are a success
+            </li>
+            <li class="flex">
+              <img
+                src="./assets/images/icon-list.svg"
+                alt="check-icon"
+                class="img-fluid mr-4"
+              />
+              And much more!
+            </li>
+          </ul>
+
+          <div class="py-4">
+            <label for="email" class="block text-sm font-bold"
+              >Email address</label
+            >
+            <div class="mt-2">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="email@company.com"
+                autocomplete="email"
+                class="block w-full rounded-md py-2 px-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              />
+              <span
+                id="emailError"
+                class="text-red-600 absolute top-0 right-0 mt-2 mr-4 hidden"
+              ></span>
+            </div>
+          </div>
+
+          <!-- Validate user email input -->
+          <script>
+            function validateEmail() {
+              const userInput = document.getElementById("email");
+              const inputError = document.getElementById("emailError");
+
+              // Regex for email validation
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+              if (emailRegex.test(userInput.value)) {
+                // Valid email format
+                inputError.style.display = "none";
+              } else {
+                // Invalid email format
+                inputError.style.display = "block";
+              }
+            }
+          </script>
+
+          <button
+            class="rounded-md py-2 font-bold text-xs md:text-sm lg:text-sm px-4 md:px-4 lg:px-2 text-center w-full"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </div>
+
+        <!--image  -->
+        <div class="right w-full md:w-1/2 lg:w-1/2 py-4 order-1 md:order-2">
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            class="img-fluid rounded-none md:rounded-md lg:rounded-md mx-auto"
+            alt="..."
+            id="right-img"
+          />
+        </div>
+      </div>
+
+      <div class="attribution py-2">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="http://github.com/SusanGithaigaN">Susan Githaiga</a>.
+      </div>
+    </div>
+    <!-- Thanks for subscribing! A confirmation email has been sent to
+    ash@loremcompany.com. Please open it and click the button inside to confirm
+    your subscription. Dismiss message -->
+
+    <!-- Success message end -->
+  </body>
+</html>

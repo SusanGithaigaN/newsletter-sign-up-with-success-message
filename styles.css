@@ -1,0 +1,47 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(234, 29%, 20%);
+}
+
+.home {
+    background-color: white;
+}
+
+p {
+    font-size: 16px;
+}
+
+button {
+    color: white !important;
+    background-color: hsl(234, 29%, 20%) !important;
+}
+
+/* responsiveness */
+@media only screen and (max-width: 768px) {
+    body{
+        width: 100%;
+        height: fit-content;
+    }
+    #right-img{
+        width: 100%;
+        /* padding-left: 2%;
+        padding-right: 2%; */
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        /* padding: 0; */
+        order: initial;
+    }
+    .left{
+        padding: 8% !important;
+    }
+}
